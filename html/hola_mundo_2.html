@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<div class="topbar"></div>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de HTML5">
+    <meta name="keywords" content="HTML,CSS3,JavaScript">
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Ejercicios de JavaScript</title>
+</head>
+
+<header>
+    <div class="menu-bar"></div>
+
+    <div class="cont-menu">
+        <div class="item">
+            <a href="../index.html">INICIO</a>
+        </div>
+        <div class="item">
+            <a href="aumento_trabajador.html">CALCULO DE AUMENTO</a>
+        </div>
+        <div class="item">
+            <a href="horas_trabajo.html">HORAS EXTRAS</a>
+        </div>
+        <div class="item">
+            <a href="notas_definitivas.html">NOTAS DEFINITIVAS</a>
+        </div>
+        <div class="item">
+            <a href="identificar_numeros.html">NUMEROS</a>
+        </div>
+    </div>
+
+</header>
+
+<body>
+
+
+    <form action="" method="POST">
+        Dato1 <input type="number" id="Dato1"> Dato2 <input type="number" id="Dato2"><br><br>
+        <button type="button" onclick="Sumar();">Calcular Suma</button>
+        <button type="button" onclick="Restar();">Calcular Resta</button>
+        <button type="button" onclick="Multiplicar();">Calcular Multiplicacion</button>
+        <button type="button" onclick="Dividir();">Calcular Division</button>
+
+
+        <div id="resultado"></div>
+
+
+    </form>
+
+
+
+</body>
+
+</html>
+<script>
+    // Obtener valores de etiquetas, capturar valor con evento 
+    function Sumar() {
+        var Dato1 = document.getElementById('Dato1').value;
+        var Dato2 = document.getElementById('Dato2').value;
+        var res = parseInt(Dato1) + parseInt(Dato2);
+
+        document.getElementById('resultado').innerHTML = '<h1>El resultado de la Suma es: ' + res + '</h1>';
+    }
+
+    function Restar() {
+        var Dato1 = document.getElementById('Dato1').value;
+        var Dato2 = document.getElementById('Dato2').value;
+        var res = parseInt(Dato1) - parseInt(Dato2);
+
+        document.getElementById('resultado').innerHTML = '<h1>El resultado de la Resta es: ' + res + '</h1>';
+    }
+
+    function Multiplicar() {
+        var Dato1 = document.getElementById('Dato1').value;
+        var Dato2 = document.getElementById('Dato2').value;
+        var res = parseInt(Dato1) * parseInt(Dato2);
+
+        document.getElementById('resultado').innerHTML = '<h1>El resultado de la Multiplicacion es: ' + res + '</h1>';
+    }
+
+    function Dividir() {
+        var Dato1 = document.getElementById('Dato1').value;
+        var Dato2 = document.getElementById('Dato2').value;
+        var res = parseInt(Dato1) / parseInt(Dato2);
+
+        document.getElementById('resultado').innerHTML = '<h1>El resultado de la Division es: ' + res + '</h1>';
+    }
+
+
+
+
+
+
+    // function Saludar(){
+    //     alert("Hola desde mi funcion");
+    // }
+
+    // Manupilar el DOM
+    // function Saludar(){
+    //    document.getElementById('mensaje').innerHTML='<h1>Acceder al DOM desde JS</h1>'
+    // }
+</script>

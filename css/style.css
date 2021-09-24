@@ -1,62 +1,73 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-table{
-    background: rgb(82,82,82);
-    background: linear-gradient(0deg, rgba(82,82,82,1) 0%, rgba(0,0,0,1) 100%);    border-radius: 15px;
-    padding: 5px;
-    margin: 5em auto;
-    height: 40em;
+body {
+    background: url(../images/paisaje.jpg);
+    background-size: 100%;
 }
-.boton1, .boton2, .boton3{
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+
+.element1,
+.element2,
+.element3,
+.element4 {
     display: flex;
     align-content: center;
     justify-content: center;
-    font-size: 50px;
-    margin: center;
-    margin-left: 10px;
-    width: 80px;
-    height: 80px;
-    border-radius: 15px;
-    border: 2px solid #909393;
-    border: 3px outset;
-    padding: 5px;
-}
-.boton1{
-    background-color: rgb(211, 211, 211);
-
-}
-.boton2{
-    background-color: rgb(63, 63, 63);
-color: white;
-}
-.boton3{
-    background-color: rgb(255, 121, 121);
 }
 
-.boton1:active, .boton2:active, .boton3:active{
-    background-color: rgb(0, 0, 0);
-    color: rgb(199, 199, 199);
-    border: 0px solid #464646;
-    border: 1px outset;
+.element1 {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: rgba(100, 148, 237, 0.781);
+    border-radius: 10px;
 }
-input{
-    background-color: rgb(124, 126, 93);
-    font-family: 'DS-DIGI';
-    margin-top: 5%;
-    width: 400px;
-    height: 150px;
-    border: 5px solid #909393;
-    border-radius: 15px;
-    font-size: 80px;
-    margin-bottom: 10px;
+
+.element2 {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: rgba(237, 100, 100, 0.788);
+    border-radius: 10px;
 }
-button{
-    padding: 15px;
+
+.element3 {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: rgba(141, 131, 55, 0.774);
+    border-radius: 10px;
 }
-@font-face {
-    font-family: "DS-DIGI";
-    src: url("../fonts/DS-DIGI.TTF");
-  }
+
+.element4 {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: rgba(89, 199, 67, 0.767);
+    border-radius: 10px;
+}
+
+.element1:hover,
+.element2:hover,
+.element3:hover,
+.element4:hover {
+    background-color: rgba(114, 114, 114, 0.699);
+}
+
+.main-content div a {
+    font-size: 1.5em;
+    line-height: 12em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}

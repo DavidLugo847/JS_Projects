@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<div class="topbar"></div>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de HTML5">
+    <meta name="keywords" content="HTML,CSS3,JavaScript">
+    <link rel="stylesheet" href="../css/style-trabajo.css">
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Ejercicios de JavaScript</title>
+</head>
+
+<header>
+    <div class="menu-bar"></div>
+
+    <div class="menu-hidden">
+        <div class="item">
+            <a href="../index.html">INICIO</a>
+        </div>
+        <div class="item">
+            <a href="aumento_trabajador.html">CALCULO DE AUMENTO</a>
+        </div>
+        <div class="item">
+            <a href="horas_trabajo.html">HORAS EXTRAS</a>
+        </div>
+        <div class="item">
+            <a href="notas_definitivas.html">NOTAS DEFINITIVAS</a>
+        </div>
+        <div class="item">
+            <a href="identificar_numeros.html">NUMEROS</a>
+        </div>
+    </div>
+
+
+    <div class="cont-menu">
+        <div class="item">
+            <a href="../index.html">INICIO</a>
+        </div>
+        <div class="item">
+            <a href="aumento_trabajador.html">CALCULO DE AUMENTO</a>
+        </div>
+        <div class="item">
+            <a href="horas_trabajo.html">HORAS EXTRAS</a>
+        </div>
+        <div class="item">
+            <a href="notas_definitivas.html">NOTAS DEFINITIVAS</a>
+        </div>
+        <div class="item">
+            <a href="identificar_numeros.html">NUMEROS</a>
+        </div>
+    </div>
+
+</header>
+
+<body>
+    <div class="input-s">
+        <div class="sub">
+            <h1>Calcular Horas Extras de Trabajo</h1>
+            <label>Digite sus horas de trabajo:</label>
+            <input type="text" id="horas" placeholder="Ejemplo... 24...">
+            <div id="resultado"></div>
+            <div>
+                <button onclick="Calcular();">Calcular</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    function Calcular() {
+        var h = parseInt(document.getElementById("horas").value);
+        Hextra = h - 40;
+        hr = Hextra * 15000;
+
+        if (h <= 40) {
+            resultado = h * 10000;
+            document.getElementById('resultado').innerHTML = '<p class="res">Su sueldo semanal es: ' + resultado + '</p>';
+        } else {
+            resultado2 = 400000 + hr;
+            document.getElementById('resultado').innerHTML = '<p class="res">Has trabajado ' + Hextra + ' horas extra.</p><p  class="res">Su sueldo semanal es: ' + resultado2 + '</h1>';
+        }
+    }
+</script>

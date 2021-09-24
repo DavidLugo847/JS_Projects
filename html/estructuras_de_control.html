@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<div class="topbar"></div>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de HTML5">
+    <meta name="keywords" content="HTML,CSS3,JavaScript">
+    <link rel="stylesheet" href="../css/style-ctrl.css">
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Ejercicios de JavaScript</title>
+</head>
+
+<header>
+    <div class="menu-bar"></div>
+
+    <div class="menu-hidden">
+        <div class="item">
+            <a href="../index.html">INICIO</a>
+        </div>
+        <div class="item">
+            <a href="haumento_trabajador.html">CALCULO DE AUMENTO</a>
+        </div>
+        <div class="item">
+            <a href="horas_trabajo.html">HORAS EXTRAS</a>
+        </div>
+        <div class="item">
+            <a href="notas_definitivas.html">NOTAS DEFINITIVAS</a>
+        </div>
+        <div class="item">
+            <a href="identificar_numeros.html">NUMEROS</a>
+        </div>
+    </div>
+
+    <div class="cont-menu">
+        <div class="item">
+            <a href="../index.html">INICIO</a>
+        </div>
+        <div class="item">
+            <a href="aumento_trabajador.html">CALCULO DE AUMENTO</a>
+        </div>
+        <div class="item">
+            <a href="horas_trabajo.html">HORAS EXTRAS</a>
+        </div>
+        <div class="item">
+            <a href="notas_definitivas.html">NOTAS DEFINITIVAS</a>
+        </div>
+        <div class="item">
+            <a href="identificar_numeros.html">NUMEROS</a>
+        </div>
+    </div>
+
+</header>
+
+<body>
+    <div class="input-s">
+        <div class="sub">
+            <h1>Selector de Mes con Estructuras de Control</h1>
+            <label>Selecciona un mes:</label>
+            <select id="dia">
+                <option value=""> --Selecciona un Mes--</option>
+        <option value="1"> Mes 1</option>
+        <option value="2"> Mes 2</option>
+        <option value="3"> Mes 3</option>
+        <option value="4"> Mes 4</option>
+        <option value="5"> Mes 5</option>
+        <option value="6"> Mes 6</option>
+        <option value="7"> Mes 7</option>
+        <option value="8"> Mes 8</option>
+        <option value="9"> Mes 9</option>
+        <option value="10"> Mes 10</option>
+        <option value="11"> Mes 11</option>
+        <option value="12"> Mes 12</option>
+        <option value="13"> Mes 13</option>
+
+    </select>
+            <div id="mensaje"></div>
+            <div>
+                <button onclick="Mostrar();">Mostrar Mes</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+    function Mostrar() {
+        var dia = parseInt(document.getElementById("dia").value);
+
+
+
+        switch (dia) {
+            case 1:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Enero</p>';
+                break;
+            case 2:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Febrero</p>';
+                break;
+            case 3:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Marzo</p>';
+                break;
+            case 4:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Abril</p>';
+                break;
+            case 5:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Mayo</p>';
+                break;
+            case 6:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Junio</p>';
+                break;
+            case 7:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Julio</p>';
+                break;
+            case 8:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Agosto</p>';
+                break;
+            case 9:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Septiembre</p>';
+                break;
+            case 10:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Octubre</p>';
+                break;
+            case 11:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Noviembre</p>';
+                break;
+            case 12:
+                document.getElementById("mensaje").innerHTML = '<p>El mes seleccionado es Diciembre</p>';
+                break;
+            default:
+                document.getElementById("mensaje").innerHTML = '<p>Ese mes no existe</p>';
+                break;
+
+
+
+        }
+    }
+</script>
