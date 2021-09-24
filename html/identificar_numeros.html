@@ -96,7 +96,17 @@
                 if (num3 > num2 && num3 > num1) {
                     document.getElementById('resultado2').innerHTML = '<p>El mayor de los tres numeros es: </p><p>' + num3 + '</p>';
                 } else {
-                    document.getElementById('resultado2').innerHTML = '<p>Todos los numeros son iguales.</p>';
+                    if (num3 == num2) {
+                        document.getElementById('resultado2').innerHTML = '<p>El segundo numero es igual al tercero.</p>';
+                    } else {
+                        if (num3 == num1) {
+                            document.getElementById('resultado2').innerHTML = '<p>El primer numero es igual al tercero.</p>';
+                        } else {
+                            if (num2 == num1) {
+                                document.getElementById('resultado2').innerHTML = '<p>El primer numero es igual al segundo.</p>';
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -115,28 +125,31 @@
 
                     document.getElementById('resultado3').innerHTML = '<p>El primer y tercer numero son pares</p><p> el segundo es impar.</p>';
                 } else {
-                    if (num1 % 2 == 0) {
+                    if (num2 % 2 == 0 && num3 % 2 == 0) {
 
-                        document.getElementById('resultado3').innerHTML = '<p>Solo el primer numero es par, </p><p>los otros son impares.</p>';
+                        document.getElementById('resultado3').innerHTML = '<p>El segundo y tercer numero son pares</p><p> el tercer es impar.</p>';
                     } else {
-                        if (num2 % 2 == 0) {
+                        if (num1 % 2 == 0) {
 
-                            document.getElementById('resultado3').innerHTML = '<p>Solo el segundo numero es par,</p><p> los otros son impares.</p>';
+                            document.getElementById('resultado3').innerHTML = '<p>Solo el primer numero es par, </p><p>los otros son impares.</p>';
                         } else {
-                            if (num3 % 2 == 0) {
+                            if (num2 % 2 == 0) {
 
-                                document.getElementById('resultado3').innerHTML = '<p>Solo el tercer numero es par,</p><p> los otros son impares.</p>';
+                                document.getElementById('resultado3').innerHTML = '<p>Solo el segundo numero es par,</p><p> los otros son impares.</p>';
                             } else {
-                                document.getElementById('resultado3').innerHTML = '<p>Todos los numeros son impares.</p>';
+                                if (num3 % 2 == 0) {
+
+                                    document.getElementById('resultado3').innerHTML = '<p>Solo el tercer numero es par,</p><p> los otros son impares.</p>';
+                                } else {
+                                    document.getElementById('resultado3').innerHTML = '<p>Todos los numeros son impares.</p>';
+                                }
                             }
+
                         }
                     }
 
                 }
             }
-        }
-        if (num1 === null && num2 === null && num3 === null) {
-            document.getElementById('resultado3').innerHTML = '<p>Digita numeros validos</p>';
         }
 
 
