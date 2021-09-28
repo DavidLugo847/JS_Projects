@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../images/paisaje.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #669999;
+    overflow-y: hidden;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.input-s {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.input-s input {
+    width: 300px;
+    height: 40px;
+}
+
+.sub {
+    font-family: 'Roboto', sans-serif;
+    width: 400px;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.523);
+    color: white;
+    margin: 20px;
+    border-radius: 1.5em;
+}
+
+.input-s .sub label {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    margin-left: 5%;
+}
+
+select {
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0 10px 0 10px;
+    display: block;
+    margin: 1em auto;
+    height: 40px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="number"] {
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0 10px 0 10px;
+    display: block;
+    margin: 1em auto;
+    height: 30px;
+    width: 85%;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: rgb(53, 53, 53);
+    font-size: 1em;
+    transition: all 0.125s;
+}
+
+button:hover {
+    background: rgb(75, 153, 255);
+    color: white;
+}
+
+#resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em auto;
+    background: rgba(255, 255, 255, 0.8);
+    width: 90%;
+    border-radius: 10px;
+    height: 100px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}

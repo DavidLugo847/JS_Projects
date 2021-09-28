@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<div class="topbar"></div>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de HTML5">
+    <meta name="keywords" content="HTML,CSS3,JavaScript">
+    <link rel="stylesheet" href="../css/style-ejemplos.css">
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Ejercicios de JavaScript</title>
+</head>
+
+<header>
+    <div class="menu-hidden">
+        <div class="item">
+            <a href="../index.html">INICIO</a>
+        </div>
+        <div class="item">
+            <a href="aumento_trabajador.html">CALCULO DE AUMENTO</a>
+        </div>
+        <div class="item">
+            <a href="horas_trabajo.html">HORAS EXTRAS</a>
+        </div>
+        <div class="item">
+            <a href="notas_definitivas.html">NOTAS DEFINITIVAS</a>
+        </div>
+        <div class="item">
+            <a href="identificar_numeros.html">NUMEROS</a>
+        </div>
+    </div>
+
+
+
+    <div class="menu-bar"></div>
+
+    <div class="cont-menu">
+        <div class="item">
+            <a href="../index.html">INICIO</a>
+        </div>
+        <div class="item">
+            <a href="aumento_trabajador.html">CALCULO DE AUMENTO</a>
+        </div>
+        <div class="item">
+            <a href="horas_trabajo.html">HORAS EXTRAS</a>
+        </div>
+        <div class="item">
+            <a href="notas_definitivas.html">NOTAS DEFINITIVAS</a>
+        </div>
+        <div class="item">
+            <a href="identificar_numeros.html">NUMEROS</a>
+        </div>
+    </div>
+
+</header>
+
+<body>
+    <div class="input-s">
+        <div class="sub">
+            <h1>Suma de pares e impares:</h1>
+            <label>Digite el numero:</label>
+            <input type="number" id="num" placeholder="Ejemplo: 1, 2, 3, ...">
+            <div id="resultado"></div>
+            <div>
+                <button onclick="Calcular();">Calcular Suma</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function Calcular() {
+        let limite = parseInt(document.getElementById('num').value);
+        let acumpar = 0;
+        let acumimpar = 0;
+
+        for (let i = 1; i <= limite; i++) {
+
+
+            if (i % 2 == 0) {
+                acumpar += i;
+            }
+            if (i % 2 > 0) {
+                acumimpar += i;
+            }
+        }
+        document.getElementById('resultado').innerHTML += '<p> ' + acumpar + '</p><br>'
+        document.getElementById('resultado').innerHTML += '<p> ' + acumimpar + '</p>'
+
+    }
+</script>

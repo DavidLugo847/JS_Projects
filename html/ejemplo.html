@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<div class="topbar"></div>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de HTML5">
+    <meta name="keywords" content="HTML,CSS3,JavaScript">
+    <link rel="stylesheet" href="../css/style-ejemplos.css">
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Ejercicios de JavaScript</title>
+</head>
+
+<header>
+    <div class="menu-hidden">
+        <div class="item">
+            <a href="../index.html">INICIO</a>
+        </div>
+        <div class="item">
+            <a href="aumento_trabajador.html">CALCULO DE AUMENTO</a>
+        </div>
+        <div class="item">
+            <a href="horas_trabajo.html">HORAS EXTRAS</a>
+        </div>
+        <div class="item">
+            <a href="notas_definitivas.html">NOTAS DEFINITIVAS</a>
+        </div>
+        <div class="item">
+            <a href="identificar_numeros.html">NUMEROS</a>
+        </div>
+    </div>
+
+
+
+    <div class="menu-bar"></div>
+
+    <div class="cont-menu">
+        <div class="item">
+            <a href="../index.html">INICIO</a>
+        </div>
+        <div class="item">
+            <a href="aumento_trabajador.html">CALCULO DE AUMENTO</a>
+        </div>
+        <div class="item">
+            <a href="horas_trabajo.html">HORAS EXTRAS</a>
+        </div>
+        <div class="item">
+            <a href="notas_definitivas.html">NOTAS DEFINITIVAS</a>
+        </div>
+        <div class="item">
+            <a href="identificar_numeros.html">NUMEROS</a>
+        </div>
+    </div>
+
+</header>
+
+<body>
+
+    <div class="input-s">
+        <div class="sub">
+            <h1>El numero mayor:</h1>
+            <label>Digite las numeros:</label>
+            <input type="number" id="numero1" placeholder="Primer Numero">
+            <input type="number" id="numero2" placeholder="Segundo Numero">
+            <input type="number" id="numero3" placeholder="Tercer Numero">
+            <div id="resultado"></div>
+            <div>
+                <button onclick="Calcular_Mayor();">Calcular Mayor</button>
+                <button onclick="Calcular_Menor();">Calcular Menor</button>
+                <button onclick="Calcular_Impar();">Calcular Impar</button>
+                <button onclick="Calcular_Par();">Calcular Par</button>
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function Calcular_Mayor() {
+        var number1 = parseInt(document.getElementById('numero1').value);
+        var number2 = parseInt(document.getElementById('numero2').value);
+        var number3 = parseInt(document.getElementById('numero3').value);
+
+        if (number1 > number2 && number1 > number3) {
+            document.getElementById('resultado').innerHTML = '<p>El numero 1 es el mayor: ' + number1 + '</p>'
+        }
+        if (number2 > number1 && number2 > number3) {
+            document.getElementById('resultado').innerHTML = '<p>El numero 2 es el mayor: ' + number2 + '</p>'
+        }
+        if (number3 > number2 && number3 > number1) {
+            document.getElementById('resultado').innerHTML = '<p>El numero 3 es el mayor: ' + number3 + '</p>'
+
+        }
+    }
+
+    function Calcular_Menor() {
+        var number1 = parseInt(document.getElementById('numero1').value);
+        var number2 = parseInt(document.getElementById('numero2').value);
+        var number3 = parseInt(document.getElementById('numero3').value);
+
+        if (number1 < number2 && number1 < number3) {
+            document.getElementById('resultado').innerHTML = '<p>El numero 1 es el menor: ' + number1 + '</p>'
+        }
+        if (number2 < number1 && number2 < number3) {
+            document.getElementById('resultado').innerHTML = '<p>El numero 2 es el menor: ' + number2 + '</p>'
+        }
+        if (number3 < number2 && number3 < number1) {
+            document.getElementById('resultado').innerHTML = '<p>El numero 3 es el menor: ' + number3 + '</p>'
+
+        }
+    }
+
+    function Calcular_Par() {
+
+        let number1 = parseInt(document.getElementById('numero1').value);
+        let number2 = parseInt(document.getElementById('numero2').value);
+        let number3 = parseInt(document.getElementById('numero3').value);
+        let Par = 0;
+
+        if (number1 % 2 == 0) {
+
+            Par++;
+        }
+        if (number2 % 2 == 0) {
+
+            Par++;
+        }
+        if (number3 % 2 == 0) {
+
+            Par++;
+        }
+
+        document.getElementById('resultado').innerHTML = '<p>Se encontraron: ' + Par + ' Par</p>'
+    }
+
+    function Calcular_Impar() {
+
+        let number1 = parseInt(document.getElementById('numero1').value);
+        let number2 = parseInt(document.getElementById('numero2').value);
+        let number3 = parseInt(document.getElementById('numero3').value);
+        let Impar = 0;
+
+        if (number1 % 2 > 0) {
+
+            Impar++;
+        }
+        if (number2 % 2 > 0) {
+
+            Impar++;
+        }
+        if (number3 % 2 > 0) {
+
+            Impar++;
+        }
+
+        document.getElementById('resultado').innerHTML = '<p>Se encontraron: ' + Impar + ' Impar</p>'
+    }
+</script>

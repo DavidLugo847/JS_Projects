@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<div class="topbar"></div>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de HTML5">
+    <meta name="keywords" content="HTML,CSS3,JavaScript">
+    <link rel="stylesheet" href="../css/style-ejemplos.css">
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Ejercicios de JavaScript</title>
+</head>
+
+<header>
+    <div class="menu-hidden">
+        <div class="item">
+            <a href="../index.html">INICIO</a>
+        </div>
+        <div class="item">
+            <a href="aumento_trabajador.html">CALCULO DE AUMENTO</a>
+        </div>
+        <div class="item">
+            <a href="horas_trabajo.html">HORAS EXTRAS</a>
+        </div>
+        <div class="item">
+            <a href="notas_definitivas.html">NOTAS DEFINITIVAS</a>
+        </div>
+        <div class="item">
+            <a href="identificar_numeros.html">NUMEROS</a>
+        </div>
+    </div>
+
+
+
+    <div class="menu-bar"></div>
+
+    <div class="cont-menu">
+        <div class="item">
+            <a href="../index.html">INICIO</a>
+        </div>
+        <div class="item">
+            <a href="aumento_trabajador.html">CALCULO DE AUMENTO</a>
+        </div>
+        <div class="item">
+            <a href="horas_trabajo.html">HORAS EXTRAS</a>
+        </div>
+        <div class="item">
+            <a href="notas_definitivas.html">NOTAS DEFINITIVAS</a>
+        </div>
+        <div class="item">
+            <a href="identificar_numeros.html">NUMEROS</a>
+        </div>
+    </div>
+</header>
+
+<body>
+
+
+
+
+
+    <div class="input-s">
+        <div class="sub">
+            <h1>Numero de mensajes ciclo For:</h1>
+            <label>Selecciona las veces:</label>
+
+            <select id="numero1" onchange="Saludar();">
+                <option value="1">1 Veces</option>
+                <option value="2">2 Veces</option>
+                <option value="3">3 Veces</option>
+                <option value="4">4 Veces</option>
+                <option value="5">5 Veces</option>
+                <option value="6">6 Veces</option>
+            </select>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+<script>
+    // Estructura For
+    // for([Expresion inicial]); [condicion]; [Expresion incremento])
+    // sentencia
+
+
+
+    function Saludar() {
+
+
+        var numero = document.getElementById('numero1').value;
+
+        for (let i = 1; i <= numero; i++) {
+            alert("Hola Mundo " + i)
+        }
+    }
+</script>
