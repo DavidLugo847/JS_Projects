@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<div class="topbar"></div>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de HTML5">
+    <meta name="keywords" content="HTML,CSS3,JavaScript">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Ejercicios de JavaScript</title>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-2">
+            <nav>
+                <ul>
+                    <li class="registrar-usuario hover-overlay">
+                        <a href="#">
+                            <span>Registrar Productos</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <h1>Registro de Productos</h1>
+    <div class="container-sm">
+        <div class="row">
+            <div class="form-floating mb-3 col-8">
+                <input type="text" class="form-control" id="nombre_prod" value="" placeholder="Nombre del Producto">
+                <label for="nombre_prod">Nombre</label>
+            </div>
+            <div class="form-floating mb-3 col-4">
+                <input type="number" class="form-control" id="nombre_prod" value="" placeholder="Nombre del Producto">
+                <label for="nombre_prod">Cantidad</label>
+            </div>
+            <div class="mb-3 col-6">
+                <select class="form-select" id="unidadprod" aria-label="Select de unidadprod">
+                    <option selected>Seleciona la unidad productiva</option>
+                    <option value="1">Agricola</option>
+                    <option value="2">Agroindustria</option>
+                    <option value="3">Gastronomia</option>
+                    <option value="1">Pecuaria</option>
+                    <option value="2">escuela Nacional del Café</option>
+                    <option value="3">Ambiental - Recursos Naturales</option>
+                    <option value="1">Empresa de Servicios Públicos</option>
+                    <option value="2">Moda - Comercio y Servicios</option>
+                  </select>
+            </div>
+            <div class="mb-3 col-6">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Selecciona Sede de Venta</option>
+                    <option value="1">Centro</option>
+                    <option value="2">Yamboró</option>
+                  </select>
+            </div>
+            <div class="input-group mb-3 col-6">
+                <input type="file" class="form-control" value="" id="imagen_prod">
+                <label class="input-group-text" for="imagen_prod">Cargar</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea type="text" class="form-control" value="" id="description_prod" placeholder="Descripcion del Producto"></textarea>
+                <label for="description_prod">Descripcion</label>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Registrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+<script>
+    function registrar_producto() {
+        let nombre = document.getElementById('nombre_prod').value;
+        let img_prod = document.getElementById('imagen_prod').value;
+        let des_prod = document.getElementById('description_prod').value;
+        let des_prod = document.getElementById('description_prod').value;
+
+    }
+
+    productos.push({
+        nombre,
+        img_prod,
+        des_prod
+    });
+    alert('El producto ha sido registrado con exito');
+</script>

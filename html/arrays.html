@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<div class="topbar"></div>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de HTML5">
+    <meta name="keywords" content="HTML,CSS3,JavaScript">
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Ejercicios de JavaScript</title>
+</head>
+
+<body>
+    <h1>Registrando Datos</h1><br><br>
+    <label for="Nombre">Nombre</label>
+    <input type="text" id="Nombre" placeholder="Digite el Nombre"><br>
+    <label for="Nota1">Nota 1</label>
+    <input type="text" id="Nota1" placeholder="Digite la Nota 1"><br>
+    <label for="Nota2">Nota 2</label>
+    <input type="text" id="Nota2" placeholder="Digite la Nota 2"><br>
+    <label for="Nota3">Nota 3</label>
+    <input type="text" id="Nota3" placeholder="Digite la Nota 3"><br>
+    <button type="button" onclick="registrar_notas();">Registrar</button><br><br><br>
+
+    <table border="1">
+        <th>Nombre</th>
+        <th>Nota 1</th>
+        <th>Nota 2</th>
+        <th>Nota 3</th>
+        <th>Definitiva</th>
+        <th>Estado</th>
+
+
+        <tbody id="Tabla"></tbody>
+    </table>
+
+
+
+
+</body>
+
+<script>
+    var personas = [];
+
+
+    function registrar_notas() {
+        let nombre = document.getElementById('Nombre').value;
+        let nota1 = document.getElementById('Nota1').value;
+        let nota2 = document.getElementById('Nota2').value;
+        let nota3 = document.getElementById('Nota3').value;
+
+        personas.push({
+            nombre,
+            nota1,
+            nota2,
+            nota3
+        });
+
+        alert('Se ha registrado la nota de: ' + nombre);
+        Listar_Notas();
+    }
+
+    function Listar_Notas() {
+        var datos = "";
+        for (var i = 0; i < personas.length; i++) {
+
+
+
+            datos += "<tr><td>" + personas[i].nombre + "</td>";
+            datos += "<td>" + personas[i].nota1 + "</td>";
+            datos += "<td>" + personas[i].nota2 + "</td>";
+            datos += "<td>" + personas[i].nota3 + "</td>";
+            datos += "<td>" + (parseFloat(personas[i].nota1) + parseFloat(personas[i].nota2) + parseFloat(personas[i].nota3)) / 3 + "</td>";
+
+            if ((parseFloat(personas[i].nota1) + parseFloat(personas[i].nota2) + parseFloat(personas[i].nota3)) / 3 < 2.69) {
+                datos += "<td>Perdió</td><tr>";
+                console.log(datos);
+            } else {
+                if ((parseFloat(personas[i].nota1) + parseFloat(personas[i].nota2) + parseFloat(personas[i].nota3)) / 3 >= 2.7 && (parseFloat(personas[i].nota1) + parseFloat(personas[i].nota2) + parseFloat(personas[i].nota3)) / 3 < 3) {
+                    datos += "<td>Inhabilitado</td><tr>";
+                    console.log(datos);
+                } else {
+                    datos += "<td>Pasó</td><tr>";
+                    console.log(datos);
+
+                }
+            }
+        }
+
+
+
+
+
+        document.getElementById('Tabla').innerHTML = datos;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // desclaracion de arrerglos
+    // var colores = ['amarillo', 'azul', 'rojo', 'verde'];
+    // alert(colores[3]);
+
+
+
+    // arreglos con metodos
+    // var colores = ['Amarillo', 'Azul', 'Rojo', 'Violeta', 'Rosado'];
+    // alert(colores.length);
+
+    // // metodo 'for' para ver la longitud de un arreglo
+    // for (var i = 0; i < colores.length; i++) {
+
+    //     alert('colores[' + i + ']=' + colores[i]);
+    // }
+
+
+
+
+
+
+    // convertir contenido de un arreglo en string o texto
+    // var colores = ['Amarillo', 'Azul', 'Rojo', 'Violeta', 'Rosado'];
+
+    // alert(colores.toString());
+
+
+
+
+    // agregar un nuevo elemento al arreglo de manera dinamica con push
+
+    // var colores = ['Amarillo', 'Azul', 'Rojo', 'Violeta', 'Rosado'];
+
+    // console.log(colores);
+
+    // colores.push('Blanco');
+
+    // for (var i = 0; i < colores.length; i++) {
+
+    //     alert('colores[' + i + ']=' + colores[i]);
+    // }
+
+
+
+    // Pop elimina el ultimo elemento del arreglo
+
+    // var colores = ['Amarillo', 'Azul', 'Rojo', 'Violeta', 'Rosado'];
+
+    // console.log(colores);
+
+    // colores.pop();
+
+    // for (var i = 0; i < colores.length; i++) {
+
+    //     alert('colores[' + i + ']=' + colores[i]);
+    // }
+
+
+
+
+    // Arreglo JSON
+
+    // var personas = [{
+    //     'Nombre': 'Carlos',
+    //     'Edad': 20,
+    //     'Fecha_Nacimiento': "12/02/1995"
+    // }, {
+    //     'Nombre': 'Jose',
+    //     'Edad': 19,
+    //     'Fecha_Nacimiento': "19/05/2002"
+    // }, {
+    //     'Nombre': 'Maria',
+    //     'Edad': 21,
+    //     'Fecha_Nacimiento': "24/12/2000"
+    // }, {
+    //     'Nombre': 'Andrea',
+    //     'Edad': 18,
+    //     'Fecha_Nacimiento': "18/09/2003"
+    // }, {
+    //     'Nombre': 'Luisa',
+    //     'Edad': 14,
+    //     'Fecha_Nacimiento': "01/01/2007"
+    // }, {
+    //     'Nombre': 'Manuel',
+    //     'Edad': 11,
+    //     'Fecha_Nacimiento': "23/10/2010"
+    // }, {
+    //     'Nombre': 'Gabriel',
+    //     'Edad': 7,
+    //     'Fecha_Nacimiento': "25/12/2014"
+    // }, ];
+
+    // // Mostrar datos usando la posicion del arreglo y el nombre de la clave
+    // console.log(personas[0].Edad);
+</script>
