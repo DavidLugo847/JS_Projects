@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="stylesheet" href="../fonts/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
@@ -18,83 +20,68 @@
 </head>
 
 <body>
+    <nav id="main-nav">
+        <div id="bar">
+            <div id="menu-bar">
+                <a id="btn-menu" href="#"><i id="fas" class="fas fa-align-justify"></i></a>
+            </div>
+        </div>
+        <div id="main-content">
+            <div id="cont">
+                <div id="cont-home"><a id="element-home" title="Volver al Inicio" href="index.html"><span id="icon icon-home_filled"></span>Inicio</a>
+                </div>
 
-    <div class="row">
-        <div class="col-2">
-            <nav>
-                <ul>
-                    <li class="registrar-usuario hover-overlay">
-                        <a href="#">
-                            <span>Registrar Productos</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <h1>Registro de Productos</h1>
-    <div class="container-sm">
-        <div class="row">
-            <div class="form-floating mb-3 col-8">
-                <input type="text" class="form-control" id="nombre_prod" value="" placeholder="Nombre del Producto">
-                <label for="nombre_prod">Nombre</label>
-            </div>
-            <div class="form-floating mb-3 col-4">
-                <input type="number" class="form-control" id="nombre_prod" value="" placeholder="Nombre del Producto">
-                <label for="nombre_prod">Cantidad</label>
-            </div>
-            <div class="mb-3 col-6">
-                <select class="form-select" id="unidadprod" aria-label="Select de unidadprod">
-                    <option selected>Seleciona la unidad productiva</option>
-                    <option value="1">Agricola</option>
-                    <option value="2">Agroindustria</option>
-                    <option value="3">Gastronomia</option>
-                    <option value="1">Pecuaria</option>
-                    <option value="2">escuela Nacional del Café</option>
-                    <option value="3">Ambiental - Recursos Naturales</option>
-                    <option value="1">Empresa de Servicios Públicos</option>
-                    <option value="2">Moda - Comercio y Servicios</option>
-                  </select>
-            </div>
-            <div class="mb-3 col-6">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Selecciona Sede de Venta</option>
-                    <option value="1">Centro</option>
-                    <option value="2">Yamboró</option>
-                  </select>
-            </div>
-            <div class="input-group mb-3 col-6">
-                <input type="file" class="form-control" value="" id="imagen_prod">
-                <label class="input-group-text" for="imagen_prod">Cargar</label>
-            </div>
-            <div class="form-floating mb-3">
-                <textarea type="text" class="form-control" value="" id="description_prod" placeholder="Descripcion del Producto"></textarea>
-                <label for="description_prod">Descripcion</label>
-            </div>
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Registrar</button>
+                <hr id="ln line-space">
+
+                <a id="element" title="Unboxing de Productos" href="registrar-p.html">Registro de productos</a>
+
             </div>
         </div>
+    </nav>
+
+
+
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="../images/slider/alpinestars-1920x500.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="../images/slider/everlast-1290x500.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../images/slider/nike-1290x500.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
     </div>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="../js/main-anim.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
-
-
-
-
-
-<script>
-    function registrar_producto() {
-        let nombre = document.getElementById('nombre_prod').value;
-        let img_prod = document.getElementById('imagen_prod').value;
-        let des_prod = document.getElementById('description_prod').value;
-        let des_prod = document.getElementById('description_prod').value;
-
-    }
-
-    productos.push({
-        nombre,
-        img_prod,
-        des_prod
-    });
-    alert('El producto ha sido registrado con exito');
-</script>

@@ -5,6 +5,11 @@
 }
 
 h1 {
+    text-align: center;
+}
+
+#t-p {
+    margin-top: 1em;
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
@@ -13,18 +18,20 @@ h5 {
     font-family: 'Roboto', sans-serif;
 }
 
-.container-sm {
-    margin-top: 50px;
-    border: 1px solid rgba(64, 64, 64, .7);
-    padding: 30px;
-    border-radius: 10px;
+#cont-pri {
+    box-shadow: -1px 1px 3px 1px darkgray;
+    justify-content: center;
+    width: 70%;
+    margin-top: 1em;
+    padding: 20px;
 }
 
 label {
     margin-left: 10px;
 }
 
-nav {
+
+/* nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -74,7 +81,7 @@ li a:hover {
     color: white;
     font-size: 1.1em;
     transition: color 0.3s font 0.3s ease;
-}
+} */
 
 .btn {
     margin-top: 10px;

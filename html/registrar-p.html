@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<div class="topbar"></div>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de HTML5">
+    <meta name="keywords" content="HTML,CSS3,JavaScript">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="stylesheet" href="../fonts/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Ejercicios de JavaScript</title>
+</head>
+
+<body>
+    <nav id="main-nav">
+        <div id="bar">
+            <div id="menu-bar">
+                <a id="btn-menu" href="#"><i id="fas" class="fas fa-align-justify"></i></a>
+            </div>
+        </div>
+        <div id="main-content">
+            <div id="cont">
+                <div id="cont-home"><a id="element-home" title="Volver al Inicio" href="main.html"><span id="icon icon-home_filled"></span>Inicio</a>
+                </div>
+
+                <hr id="ln line-space">
+
+                <a id="element" title="Unboxing de Productos" href="#">Registro de productos</a>
+
+            </div>
+        </div>
+    </nav>
+    <!-- <div class="row">
+        <div class="col-2">
+            <nav>
+                <ul>
+                    <li class="registrar-usuario hover-overlay">
+                        <a href="#">
+                            <span>Registrar Productos</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div> -->
+    <h1 id="t-p">Registro de Productos</h1>
+    <div id="cont-pri" class="container cont">
+        <div class="row">
+            <div class="form-floating mb-3 col-8">
+                <input type="text" class="form-control" id="nombre_prod" value="" placeholder="Nombre del Producto" required>
+                <label for="nombre_prod">Nombre</label>
+            </div>
+            <div class="form-floating mb-3 col-4">
+                <input type="number" class="form-control" id="cantidad_prod" value="" placeholder="Nombre del Producto" required>
+                <label for="nombre_prod">Cantidad</label>
+            </div>
+            <div class="mb-3 col-6">
+                <select class="form-select" id="unidadprod" aria-label="Select de unidadprod" required>
+                    <option selected>Seleciona la unidad productiva</option>
+                    <option value="agricola">Agricola</option>
+                    <option value="agroindustria">Agroindustria</option>
+                    <option value="aastronomia">Gastronomia</option>
+                    <option value="aecuaria">Pecuaria</option>
+                    <option value="encafe">Escuela Nacional del Café</option>
+                    <option value="ambiental">Ambiental - Recursos Naturales</option>
+                    <option value="esp">Empresa de Servicios Públicos</option>
+                    <option value="moda">Moda - Comercio y Servicios</option>
+                  </select>
+            </div>
+            <div class="mb-3 col-6">
+                <select class="form-select" id="punto_venta" aria-label="Default select example" required>
+                    <option selected>Selecciona Punto de Venta</option>
+                    <option value="centro">Centro</option>
+                    <option value="yamboro">Yamboró</option>
+                  </select>
+            </div>
+            <div class="input-group mb-3 col-6">
+                <input type="file" class="form-control" value="" id="imagen_prod">
+                <label class="input-group-text" for="imagen_prod">Cargar</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea type="text" class="form-control" value="" id="description_prod" placeholder="Descripcion del Producto"></textarea>
+                <label for="description_prod">Descripcion</label>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="registrar_producto();" type="submit">Registrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<div id="cont-pri" class="container cont">
+    <div class="row">
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Registro de Productos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Se ha registrado con exito!!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Unidad Productiva</th>
+                    <th scope="col">Punto de Venta</th>
+                    <th scope="col">Imagen</th>
+                </tr>
+            </thead>
+            <tbody id="t-prod"></tbody>
+        </table>
+
+    </div>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="../js/main-anim.js"></script>
+<script src="../js/modal.js"></script>
+
+
+
+<script>
+    var productos = [];
+
+    function registrar_producto() {
+        let nombre = document.getElementById('nombre_prod').value;
+        let cantidadprod = document.getElementById('cantidad_prod').value;
+        let unidadproductiva = document.getElementById('unidadprod').value;
+        let puntoventa = document.getElementById('punto_venta').value;
+        let imagenprod = document.getElementById('imagen_prod').value;
+        let descripcionprod = document.getElementById('description_prod').value;
+
+        productos.push({
+            nombre,
+            cantidadprod,
+            unidadproductiva,
+            puntoventa,
+            imagenprod,
+            descripcionprod
+        });
+        listarProductos();
+    }
+
+
+    function listarProductos() {
+        var datos = "";
+        for (var i = 0; i < productos.length; i++) {
+
+            datos += "<tr><td>" + (parseInt(i) + 1) + "</td>";
+            datos += "<td>" + productos[i].nombre + "</td>";
+            datos += "<td>" + productos[i].descripcionprod + "</td>";
+            datos += "<td>" + productos[i].cantidadprod + "</td>";
+            datos += "<td>" + productos[i].unidadproductiva + "</td>";
+            datos += "<td>" + productos[i].puntoventa + "</td>";
+            datos += "<td>" + productos[i].imagenprod + "</td></tr>";
+
+
+        }
+        document.getElementById('t-prod').innerHTML = datos;
+
+    }
+</script>
