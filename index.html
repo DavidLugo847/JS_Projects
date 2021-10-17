@@ -10,6 +10,7 @@
     <meta name="keywords" content="HTML,CSS3,JavaScript">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-menu.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
@@ -17,50 +18,137 @@
 </head>
 
 <header>
-    <div class="menu-bar"></div>
 
-    <div class="cont-menu">
-        <div class="item">
-            <a href="index.html">INICIO</a>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EjerciciosJS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="html/aumento_trabajador.html">Calculo de Aumento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="html/horas_trabajo.html">Horas Extras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="html/notas_definitivas.html">Notas Definitivas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="html/identificar_numeros.html">Numeros</a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
-        <div class="item">
-            <a href="html/aumento_trabajador.html">CALCULO DE AUMENTO</a>
-        </div>
-        <div class="item">
-            <a href="html/horas_trabajo.html">HORAS EXTRAS</a>
-        </div>
-        <div class="item">
-            <a href="html/notas_definitivas.html">NOTAS DEFINITIVAS</a>
-        </div>
-        <div class="item">
-            <a href="html/identificar_numeros.html">NUMEROS</a>
-        </div>
-    </div>
+    </nav>
+
 
 </header>
 
 <body>
-    <div class="main-content">
-        <div class="element1">
-            <a href="html/calculadora.html">Calculadora</a>
+
+    <h1 id="titulo-principal ">Ejercicios de HTML con JS</h1>
+    <div class="cont-m ">
+
+        <div class="conts ">
+            <div class="cabecera "><img src="images/defaultimg.png"></div>
+            <div class="titulo ">
+                <p><span></span><a class="navs" title="Calculadora basica" href="html/calculadora.html">Calculadora</a></p>
+            </div>
+            <div>
+                <p>Ejemplo de calculadora usando JS y manipulando el DOM.</p>
+            </div>
         </div>
-        <div class="element2">
-            <a href="html/estructuras_de_control.html">Estructuras de Control</a>
+
+        <div class="conts ">
+            <div class="cabecera "><img src="images/defaultimg.png"></div>
+            <div class="titulo ">
+                <p><span></span><a class="navs " title="Calculadora basica" href="html/estructuras_de_control.html">Estructuras de Control</a>
+                </p>
+            </div>
+            <div>
+                <p>Ejemplo de calculadora usando JS y manipulando el DOM.</p>
+            </div>
         </div>
-        <div class="element3">
-            <a href="html/hola.html">Hola Mundo</a>
+        <div class="conts ">
+            <div class="cabecera "><img src="images/defaultimg.png"></div>
+            <div class="titulo ">
+                <p><span></span><a class="navs " title="Ejemplos de JS" href="html/hola.html">Hola Mundo</a>
+                </p>
+            </div>
+            <div>
+                <p>Ejemplo del Hola Mundo usando funciones de JS.</p>
+            </div>
         </div>
-        <div class="element4">
-            <a href="html/hola_mundo_2.html">Calculadora sencilla</a>
+        <div class="conts ">
+            <div class="cabecera "><img src="images/defaultimg.png"></div>
+            <div class="titulo ">
+                <p><span></span><a class="navs " title="Ejemplos de JS" href="html/hola_mundo_2.html">Calculadora sencilla</a>
+                </p>
+            </div>
+            <div>
+                <p>Ejemplo de Calculadora basica.</p>
+            </div>
         </div>
-        <div class="element1">
-            <a href="html/suma_de_pares_impares.html">Pares e Impares</a>
+        <div class="conts ">
+            <div class="cabecera "><img src="images/defaultimg.png"></div>
+            <div class="titulo ">
+                <p><span></span><a class="navs " title="Ejemplos de JS estructuras de control" href="html/suma_de_pares_impares.html">Pares e Impares</a>
+                </p>
+            </div>
+            <div>
+                <p>Identificacion de pares e impares con estructuras de control.</p>
+            </div>
         </div>
-        <div class="element1">
-            <a href="html/Serie_de_cinco.html">Serie de Cinco</a>
+        <div class="conts ">
+            <div class="cabecera "><img src="images/defaultimg.png"></div>
+            <div class="titulo ">
+                <p><span></span><a class="navs " title="Ejemplos de JS estructuras de control" href="html/Serie_de_cinco.html">Serie de Cinco</a>
+                </p>
+            </div>
+            <div>
+                <p>Identificacion de numeros con estructuras de control.</p>
+            </div>
         </div>
-        <div class="element1">
-            <a href="html/multiplos_de_tres.html">Multiplos de tres</a>
+        <div class="conts ">
+            <div class="cabecera "><img src="images/defaultimg.png"></div>
+            <div class="titulo ">
+                <p><span></span><a class="navs " title="Ejemplos de JS estructuras de control" href="html/multiplos_de_tres.html">Multiplos de tres</a>
+                </p>
+            </div>
+            <div>
+                <p>Identificacion de numeros con estructuras de control.</p>
+            </div>
         </div>
+        <div class="conts ">
+            <div class="cabecera "><img src="images/defaultimg.png"></div>
+            <div class="titulo ">
+                <p><span></span><a class="navs " title="Ejemplos de JS estructuras de arrays." href="html/main.html">Registro de Productos</a>
+                </p>
+            </div>
+            <div>
+                <p>Identificacion de numeros con estructuras de arrays.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
     </div>
+
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

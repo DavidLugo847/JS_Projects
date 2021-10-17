@@ -30,19 +30,3 @@ function main() {
         $(this).children('#children').slideToggle();
     });
 }
-
-
-
-var myCarousel = document.querySelector('#myCarousel');
-var carousel = new bootstrap.Carousel(myCarousel);
-
-
-
-
-
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', function() {
-    myInput.focus()
-});
